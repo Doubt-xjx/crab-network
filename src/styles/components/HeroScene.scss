@@ -1,0 +1,29 @@
+.hero-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh; /* 视窗高度的80% */
+  z-index: 0;
+  opacity: 1;
+  overflow: hidden;
+  user-select: none; /* 禁用文字选择功能 */
+  -webkit-user-select: none; /* Safari浏览器兼容 */
+  -moz-user-select: none; /* Firefox浏览器兼容 */
+  -ms-user-select: none; /* IE/Edge浏览器兼容 */
+  
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: auto; /* 确保可以与Three.js场景交互 */
+    object-fit: cover; /* 确保内容适当缩放而不是拉伸 */
+  }
+  
+  @media (max-width: 768px) {
+    opacity: 0.4; /* 在移动设备上降低3D场景的不透明度以便更好地看到文字内容 */
+  }
+} 
